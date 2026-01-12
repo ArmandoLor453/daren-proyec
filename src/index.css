@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  overflow-x: hidden;
+}
+
+/* Responsive base para móviles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+}

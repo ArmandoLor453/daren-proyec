@@ -1,0 +1,333 @@
+/* Layout general */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* HEADER */
+.header {
+  background: #4a90e2;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+/* GRID de videos EN 2 COLUMNAS */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🔹 2 columnas */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ESTILOS PARA LA PÁGINA DE BIENVENIDA */
+.welcome-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.welcome-section h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.main-description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid de características */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #3498db;
+  text-align: center;
+}
+
+.feature-card:nth-child(2) {
+  border-top-color: #e74c3c;
+}
+
+.feature-card:nth-child(3) {
+  border-top-color: #00a651;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.feature-card strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.video-count {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Call to action */
+.call-to-action {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.call-to-action h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.call-to-action p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+.action-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.action-icons span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .welcome-section {
+    padding: 1rem;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+  }
+
+  .main-description {
+    font-size: 0.95rem;
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+
+  .video-count {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .call-to-action {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .call-to-action h3 {
+    font-size: 1.4rem;
+  }
+
+  .call-to-action p {
+    font-size: 0.95rem;
+  }
+
+  .action-icons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .action-icons span {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  iframe {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .main-description {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .feature-card {
+    padding: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .call-to-action {
+    padding: 1.25rem;
+  }
+
+  .call-to-action h3 {
+    font-size: 1.2rem;
+  }
+
+  .action-icons span {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* Centrar menú y contactos */
+.menu-container,
+.contacto-card {
+  margin: 2rem auto;
+}
+
+/* Contenedor para alinear menú y contactos lado a lado en pantallas grandes */
+@media (min-width: 769px) {
+  .container > .menu-container,
+  .container > .contacto-card {
+    max-width: 1200px;
+  }
+}
